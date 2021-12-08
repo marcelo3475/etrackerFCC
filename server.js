@@ -38,7 +38,7 @@ app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static('public'))
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html')
+  res.sendFile(__dirname + '/index.html')
 });
 
 app.post('/api/users', (req, res) => {
@@ -88,5 +88,4 @@ app.post('/api/users/:id/exercises', (req, res)=>{
 
 
 const listener = app.listen(process.env.PORT || 3000, () => {
-  console.log('Your app is listening on port ' + listener.address().port)
-})
+  console.log('Your app is listening on port ' + listener.address().port)})
